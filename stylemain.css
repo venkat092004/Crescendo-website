@@ -1,0 +1,135 @@
+/* GENERAL STYLES */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #1C271E;
+  color: #F0F0F0;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* OVAL IMAGE IN SECTION 1 */
+.s1-oval-img {
+  width: 200px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50% / 60%;
+  border: 4px solid #8A9A5B;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.s1-oval-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #1C271E;
+  border-bottom: 1px solid #8A9A5B;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #8A9A5B;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #8A9A5B;
+}
+
+.nav-btn {
+  background: #8A9A5B;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: #1C271E !important;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.nav-btn:hover {
+  background: #7B8A4E;
+}
+
+/* SECTION 1 */
+.section1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 80px 30px;
+  flex-wrap: wrap;
+  background: #1C271E;
+}
+
+.section1-content {
+  max-width: 520px;
+}
+
+.section1-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  color: #FFFFFF;
+}
+
+.section1-content span {
+  color: #8A9A5B;
+}
+
+.section1-content p {
+  color: #DDDDDD;
+  font-size: 1.1rem;
+}
+
+.knowmore-btn {
+  display: inline-block;
+  margin-top: 25px;
+  background: #8A9A5B;
+  color: #1C271E;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.knowmore-btn:hover {
+  background: #7B8A4E;
+}
+
+/* SCROLL DOWN ICON */
+.scroll-down {
+  margin-top: 50px;
+  font-size: 1.8rem;
+  color: #8A9A5B;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
