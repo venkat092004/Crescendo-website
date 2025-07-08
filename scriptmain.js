@@ -80,3 +80,8 @@ AOS.init({
   once: true,
   offset: 120
 });
+function playclicksound(){
+  var sound = document.getElementById("clicksound");
+  sound.currentTime=0;//rewind to start
+  sound.play();
+}
