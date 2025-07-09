@@ -659,6 +659,7 @@ nav a:hover {
   color: #8A9A5B;
   border-radius: 50%;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .contact-social a:hover {
@@ -744,6 +745,8 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
   gap: 30px;
+  
+
 }
 
 .footer-about {
@@ -791,6 +794,7 @@ footer {
   display: flex;
   gap: 15px;
   margin-top: 20px;
+
 }
 
 .footer-social a {
@@ -803,6 +807,7 @@ footer {
   color: #8A9A5B;
   border-radius: 50%;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .footer-social a:hover {
@@ -875,6 +880,20 @@ footer {
     display: block;
     z-index: 1000;
   }
+  
+  @media (max-width: 480px) {
+  .contact-form {
+    min-width: 0;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  .form-group input,
+  .form-group textarea {
+    padding: 8px 10px;
+    font-size: 1rem;
+  }
+}
   
   .section {
     padding: 60px 20px;
