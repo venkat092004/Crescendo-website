@@ -12,16 +12,6 @@ html, body {
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-/* Prevent horizontal overflow on main containers */
-.section,
-.about-container,
-.services-grid,
-.gallery-grid,
-.works-grid,
-.contact-container,
-.footer-container {
-  overflow-x: hidden;
-}
 
 /* ===== TYPOGRAPHY ===== */
 h1, h2, h3, h4, h5, h6 {
