@@ -1,16 +1,18 @@
-document.addEventListener('DOMContentLoaded', function() {
-  // Mobile Navigation Toggle
+document.addEventListener('DOMContentLoaded', function () {
+  // === Mobile Navigation Toggle ===
   const mobileMenuIcon = document.querySelector('.mobile-menu i');
   const navMenu = document.querySelector('nav ul');
-  
-  mobileMenuIcon.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    mobileMenuIcon.classList.toggle('fa-times');
-  });
 
-  // Smooth Scroll for anchor links
+  if (mobileMenuIcon && navMenu) {
+    mobileMenuIcon.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      mobileMenuIcon.classList.toggle('fa-times');
+    });
+  }
+
+  // === Smooth Scroll for Anchor Links ===
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
       if (target) {
@@ -18,29 +20,30 @@ document.addEventListener('DOMContentLoaded', function() {
           behavior: 'smooth',
           block: 'start'
         });
-        
-        // Close mobile menu if open
-        if (navMenu.classList.contains('active')) {
+
+        // Close mobile menu after navigation (for mobile)
+        if (navMenu && navMenu.classList.contains('active')) {
           navMenu.classList.remove('active');
-          mobileMenuIcon.classList.remove('fa-times');
+          if (mobileMenuIcon) {
+            mobileMenuIcon.classList.remove('fa-times');
+          }
         }
       }
     });
   });
 
-  // Work Filtering
+  // === Work Filtering ===
   const tabBtns = document.querySelectorAll('.tab-btn');
   const workItems = document.querySelectorAll('.work-item');
-  
+
   tabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       // Remove active class from all buttons
       tabBtns.forEach(b => b.classList.remove('active'));
-      // Add active class to clicked button
       btn.classList.add('active');
-      
+
       const filter = btn.getAttribute('data-tab');
-      
+
       workItems.forEach(item => {
         if (filter === 'all' || item.getAttribute('data-category') === filter) {
           item.style.display = 'block';
@@ -51,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Scroll Down Button
+  // === Scroll Down Button ===
   const scrollDownBtn = document.querySelector('.scroll-down');
   if (scrollDownBtn) {
     scrollDownBtn.addEventListener('click', () => {
@@ -62,26 +65,34 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Form Submission
+  // === Contact Form Submission ===
   const contactForm = document.querySelector('.contact-form form');
   if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      // Here you would typically send the form data to your server
+      // Replace with actual submission logic (AJAX, fetch, etc.)
       alert('Thank you for your message! We will contact you soon.');
       this.reset();
     });
   }
+
+  // === Click Sound ===
+  window.playclicksound = function () {
+    const sound = document.getElementById("clicksound");
+    if (sound) {
+      sound.currentTime = 0; // Rewind to start
+      sound.play().catch(error => {
+        console.warn("Click sound failed to play:", error);
+      });
+    }
+  };
 });
 
-// Initialize AOS animation
-AOS.init({
-  duration: 1000,
-  once: true,
-  offset: 120
-});
-function playclicksound(){
-  var sound = document.getElementById("clicksound");
-  sound.currentTime=0;//rewind to start
-  sound.play();
+// === AOS Animation Init (Safe Check) ===
+if (typeof AOS !== 'undefined') {
+  AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 120
+  });
 }
