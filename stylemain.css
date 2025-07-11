@@ -236,14 +236,7 @@ nav li {
   list-style: none;
 }
 
-nav a {
-  color: #FFFFFF;
-  font-weight: 500;
-  padding: 8px 12px;
-  transition: 0.3s ease;
-  border-radius: 20px;
-  text-decoration: none;
-}
+
 
 nav a:hover {
   color: #8A9A5B;
@@ -264,6 +257,32 @@ nav a:hover {
   color: #8A9A5B;
   border: 2px solid #8A9A5B;
 }
+
+.nav-icon-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px; /* space between icon and label */
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  text-align: center;
+}
+nav a {
+  color: #FFFFFF;
+  font-weight: 500;
+  padding: 8px 12px;
+  transition: 0.3s ease;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+
 
 /* ===== MOBILE MENU (hamburger) ===== */
 .mobile-menu {
