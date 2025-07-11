@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Works | Crescendo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #1C271E;
+      color: white;
+    }
+
+    header {
+      background: #2A3A2E;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #8A9A5B;
+    }
+
+    header p {
+      color: #DDDDDD;
+    }
+
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .work-item {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 250px;
+      cursor: pointer;
+    }
+
+    .work-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .work-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .work-item .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(28, 39, 30, 0.9);
+      color: white;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .work-item:hover .overlay {
+      opacity: 1;
+    }
+
+    .overlay h3 {
+      color: #8A9A5B;
+      margin-bottom: 10px;
+    }
+
+    .overlay p {
+      color: #FFFFFF;
+      margin: 0;
+    }
+
+    .back-btn {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .back-btn a {
+      text-decoration: none;
+      background: #8A9A5B;
+      color: #1C271E;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    @media (max-width: 600px) {
+      .overlay h3 {
+        font-size: 1.1rem;
+      }
+      .overlay p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>All Our Works</h1>
+    <p>Explore projects we've crafted with passion and purpose</p>
+  </header>
+
+  <!-- Works Grid -->
+  <div class="works-grid">
+
+    <div class="work-item">
+      <img src="https://i.pinimg.com/736x/8f/e9/7a/8fe97aa4c0615153655bdfb86d4bc686.jpg" alt="img">
+      <div class="overlay">
+        <h3> Space Black</h3>
+        <p>Logo</p>
+        
+      </div>
+    </div>
+
+    <div class="work-item">
+      <img src="https://i.pinimg.com/736x/9b/cc/49/9bcc4909e2e91532e66a001e5898ad01.jpg" alt="img">
+      <div class="overlay">
+        <h3>Kumar Traders</h3>
+        <p>Logo</p>
+      </div>
+    </div>
+
+    <div class="work-item">
+      <img src="https://i.pinimg.com/736x/39/59/6e/39596ecfee4fed86a94141cb455c6b7c.jpg" alt="StyleHub IG Campaign">
+      <div class="overlay">
+        <h3>Durga Yoga </h3>
+        <p>Logo</p>
+      </div>
+    </div>
+
+    <div class="work-item">
+      <img src="https://i.pinimg.com/736x/90/f1/9a/90f19a3bc1dad9090ba6bf84172dff45.jpg" alt="UrbanBite Logo">
+      <div class="overlay">
+        <h3>Sasthik</h3>
+        <p>Logo</p>
+      </div>
+    </div>
+
+    <div class="work-item">
+      <img src="https://i.pinimg.com/736x/22/b5/81/22b581c069961c824023d337246d47db.jpg" alt="LaunchPad Web App">
+      <div class="overlay">
+        <h3>Core Koffie</h3>
+        <p>Logo</p>
+      </div>
+    </div>
+
+    <div class="work-item">
+      <img src="https://i.pinimg.com/736x/4f/db/64/4fdb647ad55c85ce2dc76a92d913508a.jpg" alt="TrendLab Reels">
+      <div class="overlay">
+        <h3>National Furnitures</h3>
+        <p>Logo</p>
+      </div>
+    </div>
+
+     <div class="work-item">
+      <img src="https://i.pinimg.com/736x/2b/36/e4/2b36e4b010c6bff15b98a20e72e6467e.jpg" alt="TrendLab Reels">
+      <div class="overlay">
+        <h3>Fitness Club</h3>
+        <p>Logo</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Back Button -->
+  <div class="back-btn">
+    <a href="index.html">← Back to Home</a>
+  </div>
+
+</body>
+</html>

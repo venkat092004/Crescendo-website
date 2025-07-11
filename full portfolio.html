@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Full Portfolio | Crescendo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body style="margin:0; font-family:'Poppins', sans-serif; background:#1C271E; color:white;">
+
+  <!-- Header -->
+  <header style="background:#2A3A2E; padding:20px; text-align:center;">
+    <h1 style="margin:0; color:#8A9A5B;">Our Full Portfolio</h1>
+    <p style="color:#DDDDDD;">Take a deeper look at our featured works</p>
+  </header>
+
+  <!-- Portfolio Grid -->
+  <section style="padding:50px 20px;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px; max-width:1200px; margin:auto;">
+      
+      <!-- Item 1 -->
+      <div style="position:relative; overflow:hidden; border-radius:10px; height:250px; cursor:pointer;" onclick="showOverlay(this)">
+        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=800&q=80" alt="Work 1" style="width:100%; height:100%; object-fit:cover; transition:transform 0.5s;">
+        <div style="position:absolute; bottom:-100%; left:0; right:0; background:rgba(138,154,91,0.9); color:#1C271E; padding:15px; text-align:center; transition:bottom 0.3s;">
+          <h3>Brand Identity</h3>
+          <p>Startup Logo + Kit</p>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div style="position:relative; overflow:hidden; border-radius:10px; height:250px; cursor:pointer;" onclick="showOverlay(this)">
+        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=800&q=80" alt="Work 2" style="width:100%; height:100%; object-fit:cover; transition:transform 0.5s;">
+        <div style="position:absolute; bottom:-100%; left:0; right:0; background:rgba(138,154,91,0.9); color:#1C271E; padding:15px; text-align:center; transition:bottom 0.3s;">
+          <h3>Social Campaign</h3>
+          <p>Retail Client</p>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div style="position:relative; overflow:hidden; border-radius:10px; height:250px; cursor:pointer;" onclick="showOverlay(this)">
+        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80" alt="Work 3" style="width:100%; height:100%; object-fit:cover; transition:transform 0.5s;">
+        <div style="position:absolute; bottom:-100%; left:0; right:0; background:rgba(138,154,91,0.9); color:#1C271E; padding:15px; text-align:center; transition:bottom 0.3s;">
+          <h3>Strategy Meet</h3>
+          <p>Collaboration Flow</p>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div style="position:relative; overflow:hidden; border-radius:10px; height:250px; cursor:pointer;" onclick="showOverlay(this)">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Work 4" style="width:100%; height:100%; object-fit:cover; transition:transform 0.5s;">
+        <div style="position:absolute; bottom:-100%; left:0; right:0; background:rgba(138,154,91,0.9); color:#1C271E; padding:15px; text-align:center; transition:bottom 0.3s;">
+          <h3>Launch Day</h3>
+          <p>Event Coverage</p>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div style="position:relative; overflow:hidden; border-radius:10px; height:250px; cursor:pointer;" onclick="showOverlay(this)">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Work 5" style="width:100%; height:100%; object-fit:cover; transition:transform 0.5s;">
+        <div style="position:absolute; bottom:-100%; left:0; right:0; background:rgba(138,154,91,0.9); color:#1C271E; padding:15px; text-align:center; transition:bottom 0.3s;">
+          <h3>Video Project</h3>
+          <p>Media Production</p>
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div style="position:relative; overflow:hidden; border-radius:10px; height:250px; cursor:pointer;" onclick="showOverlay(this)">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80" alt="Hand interacting with a smartphone displaying multiple app screens, modern workspace with laptop and coffee cup, environment is bright and organized, mood is productive and innovative">
+        <div style="position:absolute; bottom:-100%; left:0; right:0; background:rgba(138,154,91,0.9); color:#1C271E; padding:15px; text-align:center; transition:bottom 0.3s;">
+          <h3>UI/UX Screens</h3>
+          <p>App Prototype</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Go Back Button -->
+  <div style="text-align:center; margin-bottom:40px;">
+    <a href="index.html" style="text-decoration:none; background:#8A9A5B; color:#1C271E; padding:12px 25px; border-radius:30px; font-weight:600;">← Back to Home</a>
+  </div>
+
+  <!-- Inline JavaScript for hover overlays -->
+  <script>
+    function showOverlay(card) {
+      const overlay = card.querySelector('div');
+      if (overlay.style.bottom === "0px") {
+        overlay.style.bottom = "-100%";
+        card.querySelector("img").style.transform = "scale(1)";
+      } else {
+        overlay.style.bottom = "0";
+        card.querySelector("img").style.transform = "scale(1.1)";
+      }
+    }
+  </script>
+</body>
+</html>
