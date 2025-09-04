@@ -397,25 +397,31 @@ We focus on data-driven results and compelling storytelling to engage audiences 
         </div>
       </div>
       <div class="contact-form" data-aos="fade-left">
-        <form name="contact" method="POST" data-netlify="true">
-  <input type="hidden" name="form-name" value="contact">
+  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <!-- Hidden input for Netlify -->
+    <input type="hidden" name="form-name" value="contact">
+    
+    <!-- Honeypot field to prevent spam -->
+    <p style="display:none">
+      <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+    </p>
 
-  <div class="form-group">
-    <input type="text" name="name" placeholder="Your Name" required>
-  </div>
-  <div class="form-group">
-    <input type="email" name="email" placeholder="Your Email" required>
-  </div>
-  <div class="form-group">
-    <input type="tel" name="phone" placeholder="Phone Number">
-  </div>
-  <div class="form-group">
-    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-  </div>
-  <button type="submit" class="knowmore-btn">Send Message <i class="fas fa-paper-plane"></i></button>
-</form>
+    <div class="form-group">
+      <input type="text" name="name" placeholder="Your Name" required>
+    </div>
+    <div class="form-group">
+      <input type="email" name="email" placeholder="Your Email" required>
+    </div>
+    <div class="form-group">
+      <input type="tel" name="phone" placeholder="Phone Number">
+    </div>
+    <div class="form-group">
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="knowmore-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+  </form>
+</div>
 
-      </div>
     </div>
   </section>
 
